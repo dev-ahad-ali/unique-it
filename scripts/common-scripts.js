@@ -22,6 +22,7 @@
                     navigation: false,
                     speed: 800,
                     slidesToShow: 1,
+                    centerMode: true,
                     slidesToScroll: 1,
     
                 });
@@ -60,8 +61,8 @@
 
         //Testimonial Swiper
         var swiper = new Swiper(".review-carousel", {
-            slidesPerView: "auto",
-            centeredSlides: true,
+            slidesPerView:1.2,
+            // centeredSlides: true,
             spaceBetween: 30,
             loop: true,
             autoplay: {
@@ -72,6 +73,13 @@
               el: ".swiper-pagination",
               clickable: true,
             },
+            breakpoints: {
+                768: {
+                  slidesPerView: "auto",
+                  centeredSlides: true,
+                  spaceBetween: 30,
+                },
+              },
           });
         
         $(window).on("load", function () {

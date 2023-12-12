@@ -1312,6 +1312,10 @@ iframe{
   /* Services Style */
   .service-info-inner{
     display: block;
+    padding: 25px 0;
+  }
+  .service-head{
+    padding: 0 0 20px;
   }
   .side-bar{
     position: inherit;
@@ -1338,8 +1342,48 @@ iframe{
     color: var(--primary-color);
     padding: 10px 20px;
   }
+  .sevice-content {
+    margin-top: 15px;
+  }
+  .sevice-item{
+    padding-top: 15px;
+  }
   .card-wrap{
     display: block;
+    padding-bottom: 40px;
+  }
+  .slick-dotted.slick-slider{
+    margin-bottom: 0;
+  }
+  .card{
+    padding: 10px;
+    margin: 10px;
+  }
+  .card img{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .card-wrap .slick-dots button{
+    width: 20px;
+    height: 1px;
+    padding: 1px;
+    border-radius: 0;
+    background-color: var(--primary-color);
+    transition:  all 0.3s ease-in-out;
+  }
+  .card-wrap .slick-dots{
+    bottom: 0;
+  }
+  .card-wrap .slick-active button{
+    width: 20px;
+    height: 3px;
+    border-radius: 0;
+    background-color: var(--white);
+  }
+  .card p{
+    font-size: 12px;
+    margin-top:10px;
   }
   /* Services Style */
   /* Our team Style */
@@ -1410,7 +1454,8 @@ iframe{
   }
   .customer-review {
     margin-top: 30px;
-  }
+    padding: 25px;
+}
   .review-slide{
     max-width: 275px;
     padding: 10px 15px;

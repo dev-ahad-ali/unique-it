@@ -750,11 +750,10 @@ video.video-play {
   margin-top: 70px;
 }
 .team-carousel{
-  padding: 70px 0;
-  overflow: visible;
+  padding: 70px 0 ;
 }
 .team-card{
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 auto;
   padding: 20px 20px 40px 20px;
   background: rgba(72, 202, 228, 0.2);
@@ -1207,6 +1206,9 @@ iframe{
     height: 85px;
   }
   /* Gobal Style */
+  body.navOpen{
+    overflow: hidden;
+  }
 
   /* Hearder Style */
   .logo{
@@ -1308,6 +1310,9 @@ iframe{
   .hero p{
     margin-top:10px;
   }
+  .navOpen .hero-text a{
+    display: none;
+   }
   /* Hero Style */
   /* Services Style */
   .service-info-inner{
@@ -1516,6 +1521,35 @@ iframe{
     margin-top:30px;
   }
   /* Footer Style */
+  /* Contact Page Style */
+  .contact-us {
+    padding: 130px 0 40px;
+}
+  .contact-card-wrap{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact-info {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 70px;
+}
+.form {
+  padding: 20px;
+  order:2;
+}
+.form-row:first-of-type {
+  margin-top: 25px;
+}
+.form-row:not(:first-of-type) {
+  margin-top: 30px;
+}
+.form-row textarea {
+  width: 100%;
+  min-height: 130px;
+}
+.form-submit {
+  margin-top: 40px;
+}
+  /* Contact Page Style */
   
 }
 
@@ -1524,6 +1558,27 @@ iframe{
 */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  .navbar-nav{
+    padding-top: 65px;
+  }
+  .navOpen .navbar-nav-list li a {
+    font-size: 25px;
+    line-height: 45px;
+}
+.navOpen .navbar-nav-list {
+  grid-gap: 0;
+}
+.header .btn.primary{
+  position: absolute;
+  top: 305px;
+  left: -100%;
+}
+.navOpen .btn.primary {
+  z-index: 999;
+  top: 305px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 }
 
 /*		Tablet Layout: 768px.
@@ -1548,10 +1603,14 @@ iframe{
   h2{
     font-size: 40px;
   }
+  body.navOpen{
+    overflow: hidden;
+  }
 
    /* Hearder Style */
-   .header.navOpen{
+   .navOpen .header{
     background-color: #000000;
+    transition: all 0.6s ease-in-out;
    }
    .logo{
     position: relative;
@@ -1606,7 +1665,7 @@ iframe{
     top: 580px;
     left: 50%;
     transform: translateX(-50%);
-}
+   }
   .phone-nav{
     display: block;
   }
@@ -1645,6 +1704,9 @@ iframe{
     transform: rotate(-45deg);
   }
   /* Hearder Style */
+  .navOpen .hero-text a{
+    display: none;
+   }
   /* Our Team Style */
   .team-card{
     padding: 15px 15px 25px 15px;
@@ -1713,6 +1775,32 @@ iframe{
     padding: 30px 40px;
   }
   /* Services Style */
+  /* Contact Page Style */
+  .contact-us {
+    padding: 110px 0 40px;
+}
+.contact-card-wrap {
+  grid-template-columns: repeat(2, 1fr);
+}
+.contact-info {
+  margin-top: 60px;
+}
+.form {
+  padding: 15px;
+}
+.form-row:first-of-type {
+  margin-top: 25px;
+}
+.form-row:not(:first-of-type) {
+  margin-top: 30px;
+}
+.form-row textarea {
+  min-height: 150px;
+}
+.form-submit {
+  margin-top: 30px;
+}
+  /* Contact Page Style */
 }
 
 /*		Custom Screem.

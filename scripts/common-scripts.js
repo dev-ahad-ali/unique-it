@@ -32,13 +32,13 @@
          //Team Swiper
          var swiper = new Swiper(".team-carousel", {
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 20,
             centeredSlides: true,
             loop: true,
-            // autoplay: {
-            //     delay: 2500,
-            //     disableOnInteraction: false,
-            //   },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
             pagination: {
               el: ".swiper-pagination",
               clickable: true,
@@ -47,17 +47,17 @@
                 640: {
                     loop: true,
                   slidesPerView: 3,
-                  spaceBetween: 20,
+                  spaceBetween: 10,
                 },
                 768: {
                     loop: true,
                   slidesPerView: 3,
-                  spaceBetween: 40,
+                  spaceBetween: 30,
                 },
                 1024: {
                     loop: true,
                   slidesPerView: 3,
-                  spaceBetween: 50,
+                  spaceBetween: 30,
                 },
               },
           });
@@ -126,7 +126,7 @@
         //   Phone Nav 
         
           $('.phone-nav').click(function(){
-            $("header").toggleClass("navOpen");
+            $("body").toggleClass("navOpen");
 
         })
 

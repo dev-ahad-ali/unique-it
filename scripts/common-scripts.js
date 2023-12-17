@@ -44,11 +44,6 @@
               clickable: true,
             },
             breakpoints: {
-                640: {
-                    loop: true,
-                  slidesPerView: 3,
-                  spaceBetween: 10,
-                },
                 768: {
                     loop: true,
                   slidesPerView: 3,

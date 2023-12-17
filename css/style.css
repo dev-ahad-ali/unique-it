@@ -836,12 +836,12 @@ background: linear-gradient(90deg, rgba(44,157,210,1) 0%, rgba(147,231,81,0.8799
   background-color: #000000;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0;
   transition: all 0.3s ease-in-out;
   position: absolute;
 }
 .project-gallary-item-thumb:hover::after{
-  opacity: 0;
+  opacity: 0.5;
   transform: scale(1.1);
 }
 .project-gallary-item h3{
@@ -850,12 +850,12 @@ background: linear-gradient(90deg, rgba(44,157,210,1) 0%, rgba(147,231,81,0.8799
 .project-gallary-item-thumb{
   position: relative;
 }
-.project-gallary-item:hover .project-link{
+.project-gallary-item-thumb:hover .project-link{
   height: 50px;
   opacity: 1;
   transform: scale(1.1);
 }
-.project-gallary-item:hover .project-img{
+.project-gallary-item-thumb:hover .project-img{
   transform: scale(1.1);
 }
 .project-img{

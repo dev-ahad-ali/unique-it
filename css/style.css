@@ -1080,6 +1080,60 @@ iframe{
   height: 100%;
 }
 /* End Contact Page style */
+/* Beginning Portfolio Page style */
+.portfolio{
+  padding: 200px 0 80px;
+}
+.portfolio-content aside{
+  overflow: hidden;
+  
+  -webkit-overflow-style:none ;
+  scrollbar-width: none;
+}
+.portfolio-nav{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:50px;
+  border-bottom: 8px solid var(--primary-color);
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.portfolio-nav::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+.portfolio-nav li{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--dark-bg);
+  background-color: #ffe4c4;
+  border-radius: 20px 20px 1px 1px;
+  padding: 15px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.portfolio-nav li:hover{
+  background-color: var(--primary-color);
+}
+.portfolio-nav .active{
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+.portfolio-body{
+  background: rgba(72, 202, 228, 0.2);
+  padding: 40px;
+  border-radius: 20px;
+  margin-top:80px;
+}
+.portfolio-item{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+/* End Portfolio Page style */
 
 /* Beginning footer style */
 .footer{
@@ -1567,7 +1621,28 @@ iframe{
   margin-top: 40px;
 }
   /* Contact Page Style */
-  
+  /* Porfolio Page Style */
+  .portfolio {
+    padding: 120px 0 50px;
+  }
+  .portfolio-nav{
+    grid-gap: 20px;
+    border-bottom: 5px solid var(--primary-color);
+  }
+  .portfolio-nav li{
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 20px;
+  }
+  .portfolio-body {
+    margin-top: 35px;
+    padding: 20px;
+  }
+  .portfolio-item{
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:25px;
+  }
+  /* Porfolio Page Style */
 }
 
 /*		Wide Mobile Layout: 480px.
@@ -1824,6 +1899,11 @@ iframe{
   margin-top: 30px;
 }
   /* Contact Page Style */
+  /* Portfolio Page Style */
+  .portfolio-item{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Portfolio Page Style */
 }
 
 /*		Custom Screem.

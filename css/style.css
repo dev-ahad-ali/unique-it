@@ -750,25 +750,44 @@ video.video-play {
   margin-top: 70px;
 }
 .team-carousel{
-  padding: 70px 0 ;
+  padding: 70px 0 100px;
 }
 .team-card{
   max-width: 350px;
   margin: 0 auto;
   padding: 20px 20px 40px 20px;
   background: rgba(72, 202, 228, 0.2);
-  border:1px solid rgba(67, 192, 185, 0.5);
-  border-bottom:8px solid rgba(67, 192, 185, 0.5);
+  border:4px solid transparent;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
+  position:relative;
+}
+.team-card::after{
+  position:absolute;
+  content:"";
+  width: 100%;
+  top:-3px;
+  left:-5px;
+  right:0;
+  bottom:-3px;
+  border-radius: 16px;
+  border:5px solid transparent;
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: rgb(44,157,210);
+  background: linear-gradient(62deg, rgba(44,157,210,1) 0%, rgba(67,192,185,1) 59%); 
+  /* background: rgb(44,157,210);
+background: linear-gradient(90deg, rgba(44,157,210,1) 0%, rgba(147,231,81,0.8799894957983193) 100%); */
+  z-index: -1;
 }
 .team-card:hover{
-  border-bottom:8px solid rgba(67, 192, 185, 1);
   transform: scale(1.1);
+  box-shadow: 0px 0px 23px 0px rgba(44,157,210,1);
 }
 .swiper-slide-active .team-card{
-  border-bottom:8px solid rgba(67, 192, 185, 1);
+  box-shadow: 0px 0px 23px 0px rgba(44,157,210,1);
   transform: scale(1.1);
 }
 .team-card-thumb img{
@@ -790,11 +809,11 @@ video.video-play {
   display: block;
 }
 .socials{
-  grid-gap: 5px;
+  grid-gap: 10px;
 }
 .socials img{
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 /* End Our Team style */
 /* Beginning Our Works Style */
@@ -1407,11 +1426,9 @@ iframe{
     padding: 20px 20px 30px 20px;
   }
   .team-card:hover{
-    border-bottom:8px solid rgba(67, 192, 185, 1);
     transform: scale(1);
   }
   .swiper-slide-active .team-card{
-    border-bottom:8px solid rgba(67, 192, 185, 1);
     transform: scale(1);
   }
   .team-post{
@@ -1711,6 +1728,12 @@ iframe{
   .team-card{
     padding: 15px 15px 25px 15px;
   }
+  .team-card:hover{
+    transform: scale(1);
+  }
+  .swiper-slide-active .team-card{
+    transform: scale(1);
+  }
   .team-card-info{
     margin-top:20px;
   }
@@ -1829,6 +1852,12 @@ iframe{
   
   .navbar-nav-list a{
     font-size: 18px;
+  }
+  .team-card:hover{
+    transform: scale(1);
+  }
+  .swiper-slide-active .team-card{
+    transform: scale(1);
   }
 }
 

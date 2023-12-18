@@ -44,11 +44,6 @@
               clickable: true,
             },
             breakpoints: {
-                640: {
-                    loop: true,
-                  slidesPerView: 3,
-                  spaceBetween: 10,
-                },
                 768: {
                     loop: true,
                   slidesPerView: 3,
@@ -96,6 +91,25 @@
 
         });
         
+        // Portfolio page Tab
+        $(".portfolio-body > div.portfolio-item").hide()
+        $(".portfolio-body > div.portfolio-item").eq(0).show()
+        $(".portfolio-nav > li").removeClass("active")
+        $(".portfolio-nav > li").eq(0).addClass("active")
+
+        $(".portfolio-nav > li").each(function(i){
+            $(this).click(function(){
+                if( $(this).hasClass("active") ) return false
+                else{
+                    $(".portfolio-nav > li").removeClass("active")
+                    $(this).addClass("active")
+
+                    $(".portfolio-body > div.portfolio-item").hide()
+                    $(".portfolio-body > div.portfolio-item").eq(i).show()
+                }
+            })
+        });
+
         
         var heroHeight = $(".hero-swiper").outerHeight(),
             scrollPoint = heroHeight/2;
